@@ -12,12 +12,18 @@ Time will tell how it does for 2023-24.
 ## Project Organization ##
 
 ├── README.md          <- The top-level README
+
 ├── data
+
 │   ├── interim        <- Intermediate data that has been transformed.
+
 │   ├── processed      <- The final data sets for modeling.
+
 │   └── raw            <- The original data.
+
 │
 ├── notebooks          <- Jupyter notebooks.
+
 │
 └── reports             <- Written report and slide deck
 
