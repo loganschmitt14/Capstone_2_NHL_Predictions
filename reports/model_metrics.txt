@@ -1,0 +1,38 @@
+Model Metrics:
+
+Ensemble Model Aggregates Predictions from 3 Regressors:
+
+* Linear Regressor
+	- No parameters
+	- 74.93% weighted mean accuracy on training data
+	- 8.60% accuracy standard deviation on training data
+	- 62.5% accuracy on holdout data (2023)
+
+* Support Vector Regressor
+	- SVR(kernel = 'rbf', gamma = 'scale', epsilon = 0.05)
+	- 69.22% weighted mean accuracy on training data
+	- 7.57% accuracy standard deviation on training data
+	- 75% accuracy on holdout data (2023)
+
+* LightGBM Regressor
+	- LGBMRegressor(boosting_type = 'dart', num_leaves = 12, max_depth = 16, random_state = 14,
+		 min_data_in_leaf = 16, verbosity = -1, force_col_wise = True)
+	- 72.53% weighted mean accuracy on training data
+	- 9.03% accuracy standard deviation
+	- 75% accuracy on holdout data (2023)
+
+Process: 
+
+* Each model is trained on X_all, y_all
+
+* Each model predicts on X_24
+
+* Each prediction vector is scaled with StandardScaler()
+
+* Prediction vectors are averaged
+
+* Averaged predictions are used to create playoff team predictions
+
+Results:
+
+Ensemble Model correctly predicted 12/16 (75%) of playoff teams for holdout year (2023)
